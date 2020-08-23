@@ -314,6 +314,10 @@ GitHub 官方也提供了一些 RSS:
 
 <Route author="LogicJake" example="/segmentfault/channel/frontend" path="/segmentfault/channel/:name" :paramsDesc="['频道名称，在频道 URL 可以找到']"/>
 
+### 用户
+
+<Route author="leyuuu" example="/segmentfault/user/yunqishequ_5aa899aad5395" path="/segmentfault/user/:name" :paramsDesc="['用户Id，用户详情页URL可以找到']"/>
+
 ## TesterHome
 
 ### 最新发布
@@ -677,6 +681,10 @@ GitHub 官方也提供了一些 RSS:
 ### 顺丰丰桥开放平台公告
 
 <Route author="phantomk" example="/sf/sffq-announce" path="/sf/sffq-announce"/>
+
+## 腾讯大数据
+
+<Route author="nczitzk" example="/tencent/bigdata" path="/tencent/bigdata"/>
 
 ## 腾讯游戏开发者社区
 
