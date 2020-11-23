@@ -226,7 +226,7 @@ pageClass: routes
 
 ### BTBYR 趣味盒
 
-<Route author="prnake" example="/bupt/funbox" path="/bupt/funbox" />
+<Route author="prnake" example="/bupt/funbox" path="/bupt/funbox" selfhost="1"/>
 ::: warning 注意
 
 由于需要登陆 BTBYR 后的 Cookie 值，所以只能自建，并且部署和订阅端均需支持 IPV6 网络或使用镜像站点。
@@ -1930,6 +1930,10 @@ type 列表：
 
 ## 中国地质大学 (武汉)
 
+### 今日文章 - 包含全校网站最新通知
+
+<Route author="Dorad" example="/cug/news" path="/cug/news" />
+
 ### 研究生院综合通知公告
 
 <Route author="sanmmm" example="/cug/graduate" path="/cug/graduate" />
@@ -1941,6 +1945,14 @@ type 列表：
 ### 地理与信息工程学院综合通知公告
 
 <Route author="chunibyo-wly" example="/cug/xgxy" path="/cug/xgxy" />
+
+### 工程学院
+
+<Route author="Dorad" example="/cug/gcxy/1" path="/cug/gcxy/:type" />
+
+| 所有 | 学院新闻 | 通知公告 | 党建工作 | 学术动态 | 本科生教育 | 研究生教育 | 教工之家 |
+| ---- | -------- | -------- | -------- | -------- | ---------- | ---------- | -------- |
+| 0    | 1        | 2        | 3        | 4        | 5          | 6          | 7        |
 
 ## 中国海洋大学
 
