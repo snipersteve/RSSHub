@@ -1114,6 +1114,16 @@ rule
 
 <Route author="DIYgod" example="/zhihu/hotlist" path="/zhihu/hotlist" anticrawler="1" radar="1" rssbud="1"/>
 
+### 知乎分类热榜
+
+<Route author="nczitzk" example="/zhihu/hot" path="/zhihu/hot/:category?" :paramsDesc="['分类，见下表，默认为全站']" anticrawler="1" radar="1" rssbud="1">
+
+| 全站  | 国际  | 科学    | 汽车 | 视频   | 时尚    | 时事  | 数码    | 体育  | 校园   | 影视 |
+| ----- | ----- | ------- | ---- | ------ | ------- | ----- | ------- | ----- | ------ | ---- |
+| total | focus | science | car  | zvideo | fashion | depth | digital | sport | school | film |
+
+</Route>
+
 ### 知乎想法热榜
 
 <Route author="xyqfer" example="/zhihu/pin/hotlist" path="/zhihu/pin/hotlist" anticrawler="1" radar="1" rssbud="1"/>
@@ -1141,3 +1151,12 @@ rule
 ### 知乎书店 - 知乎周刊
 
 <Route author="LogicJake" example="/zhihu/weekly" path="/zhihu/weekly" anticrawler="1" radar="1" rssbud="1"/>
+
+### 用户关注时间线
+
+<Route author="SeanChao" example="/zhihu/timeline" path="/zhihu/timeline" anticrawler="1" selfhost="1"/>
+::: warning 注意
+
+用户关注动态需要登录后的 Cookie 值，所以只能自建，详情见部署页面的配置模块。
+
+:::

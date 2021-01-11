@@ -460,14 +460,44 @@
             },
         ],
     },
-    'juejin.im': {
+    'juejin.cn': {
         _name: '掘金',
         '.': [
             {
+                title: '标签',
+                docs: 'https://docs.rsshub.app/programming.html#jue-jin-biao-qian',
+                source: '/tag/:tag',
+                target: '/juejin/tag/:tag',
+            },
+            {
+                title: '小册',
+                docs: 'https://docs.rsshub.app/programming.html#jue-jin-xiao-ce',
+                source: '/books',
+                target: '/juejin/books',
+            },
+            {
+                title: '沸点',
+                docs: 'https://docs.rsshub.app/programming.html#jue-jin-fei-dian',
+                source: ['/pins/:type', '/pins/topic/:type'],
+                target: (params) => (params.type !== 'recommended' ? '/juejin/pins/:type' : '/juejin/pins'),
+            },
+            {
                 title: '专栏',
-                docs: 'https://docs.rsshub.app/programming.html#jue-jin',
-                source: '/user/:id/posts',
+                docs: 'https://docs.rsshub.app/programming.html#jue-jin-zhuan-lan',
+                source: ['/user/:id', '/user/:id/posts'],
                 target: '/juejin/posts/:id',
+            },
+            {
+                title: '收藏集',
+                docs: 'https://docs.rsshub.app/programming.html#jue-jin-shou-cang-ji',
+                source: ['/user/:id', '/user/:id/collections'],
+                target: '/juejin/collections/:id',
+            },
+            {
+                title: '单个收藏夹',
+                docs: 'https://docs.rsshub.app/programming.html#jue-jin-dan-ge-shou-cang-jia',
+                source: '/collection/:collectionId',
+                target: '/juejin/collection/:collectionId',
             },
         ],
     },
@@ -2466,6 +2496,20 @@
                 target: (params) => {
                     const id = params.id.includes('thread') ? params.id.split('-')[1] : '';
                     return id ? `/saraba1st/thread/${id}` : '';
+                },
+            },
+        ],
+    },
+    'scboy.com': {
+        _name: 'scboy 论坛',
+        www: [
+            {
+                title: '帖子',
+                docs: 'https://docs.rsshub.app/bbs.html#scboy',
+                source: '',
+                target: (params, url) => {
+                    const id = url.includes('thread') ? url.split('-')[1].split('.')[0] : '';
+                    return id ? `/scboy/thread/${id}` : '';
                 },
             },
         ],
