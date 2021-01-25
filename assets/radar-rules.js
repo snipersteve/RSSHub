@@ -322,9 +322,10 @@
             {
                 title: '用户文章',
                 docs: 'https://docs.rsshub.app/social-media.html#zhi-hu',
-                source: '/people/:id/posts',
-                target: '/zhihu/people/posts/:id',
+                source: '/:usertype/:id/posts',
+                target: '/zhihu/posts/:usertype/:id',
             },
+
             {
                 title: '热榜',
                 docs: 'https://docs.rsshub.app/social-media.html#zhi-hu',
@@ -2586,6 +2587,48 @@
                 target: (params, url) => {
                     const id = url.includes('thread') ? url.split('-')[1].split('.')[0] : '';
                     return id ? `/scboy/thread/${id}` : '';
+                },
+            },
+        ],
+    },
+    'cqut.edu.cn': {
+        _name: '重庆理工大学',
+        tz: [
+            {
+                title: '通知',
+                docs: 'https://docs.rsshub.app/university.html#chong-qing-li-gong-da-xue',
+                source: '/*',
+            },
+        ],
+        lib: [
+            {
+                title: '图书馆通知',
+                docs: 'https://docs.rsshub.app/university.html#chong-qing-li-gong-da-xue',
+                source: '/*',
+            },
+        ],
+    },
+    'cqwu.net': {
+        _name: '重庆文理学院',
+        www: [
+            {
+                title: '通知',
+                docs: 'https://docs.rsshub.app/university.html#chong-qing-wen-li-xue-yuan',
+                source: '/:type',
+                target: (params) => {
+                    if (params.type === 'channel_7721.html') {
+                        return '/cqwu/news/notify';
+                    }
+                },
+            },
+            {
+                title: '学术活动',
+                docs: 'https://docs.rsshub.app/university.html#chong-qing-wen-li-xue-yuan',
+                source: '/:type',
+                target: (params) => {
+                    if (params.type === 'channel_7722.html') {
+                        return '/cqwu/news/academiceve';
+                    }
                 },
             },
         ],
