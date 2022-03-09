@@ -2,14 +2,6 @@ name: '[docker] CI for releases'
 
 on:
   push:
-    branches:
-      - master
-    paths:
-      - 'lib/**'
-      - '.github/workflows/docker-release.yml'
-      - 'Dockerfile'
-      - 'package.json'
-      - 'yarn.lock'
     tags:
       - v*
 
