@@ -1,3 +1,5 @@
+[![[docker] CI for releases](https://github.com/snipersteve/RSSHub/actions/workflows/docker-release.yml/badge.svg)](https://github.com/snipersteve/RSSHub/actions/workflows/docker-release.yml)
+
 > 比上游多了几个律所官网。不时拉一下上游，尽量保持同步。
 
 <p align="center">
